@@ -1,0 +1,37 @@
+Instructions on how to run the application.
+
+Step:1
+Download the Application source code from below GitHub Repository
+
+Step:2
+1. Use any of the development studio to run the android application like Android Studio.
+2. Before running the application make sure to Sync the project and then clean it once.
+3. Rebuilt the completed project to be assure that all dependencies downloaded correctly.
+4. Connect the real device or download the emulator int development tool and then run the application
+5. Initial its asl for location permission to get your current location.
+6. Based on current location latitude and longitude its fetches the AQI detail from Air Quality Open Data Platform API
+7. Also have an open text field to enter city name to fetch the AQI details
+Ex: Hyderabad, Mumbai etc
+
+Step:3
+Also included one junit test for ViewModel which can verify methods, and can run directly without any emulator or real device.
+
+
+A brief explanation of your architecture and design choices.
+
+1. I have used MVVM Architect to develop the AQI Details Application
+
+Explain : We use mainly MVVM architecture to separate the code on each like Model, Viewmodel and View
+(i.e) removing decoupling between them. Which makes our code base extensible, flexible, scalability and easily maintainable even we increase the functionality day by day.
+
+2. Used Location API to get users current location  and OpenCage Geocoding API for converting the location and getting Latitude and longitude values.
+3. Used Air Quality Open Data Platform API for fetching the AQI details based on latitude nd longitude values.
+
+4. Coroutines to handle the background task to execute asynchronously. which we boost the performance of the application.
+
+
+API key setup instructions
+
+No any specific steps required to setup the OpenCage Geocoding API and Air Quality Open Data Platform API key its already saved in application. Below is the reface Api key.
+AQIKey:String = "11d46e0a8d9ec1c35b6856f84d50b0040522e7e3"
+geoCodingAPIKey : String = "e2d042747bca46688973cae800e9c426"
